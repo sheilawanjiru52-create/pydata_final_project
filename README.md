@@ -1,59 +1,167 @@
-# Geospatial Analysis of Maternal Healthcare Access in Kenya
+# Geospatial Analysis of Child Marriage Among Girls in Africa
+## AIM
 
-## Introduction
+To investigate where child marriage is most prevalent, how it has changed over time, and whether socioeconomic factors are associated with it.
 
-Maternal healthcare is an important component of public health because access to timely and appropriate healthcare during pregnancy, childbirth, and the postnatal period can significantly influence the health and survival of both mothers and their newborns. Although Kenya has made progress in improving maternal healthcare services, access and utilization of these services continue to vary across different geographical areas.
+## Main objective
 
-Factors such as access to antenatal care, skilled birth attendance, delivery in health facilities, and postnatal care can differ substantially between counties. Identifying these geographical differences is important for understanding areas where maternal healthcare services may need greater attention.
+To analyze and visualize the geographical distribution and trends of child marriage across Africa using Python and GIS.
 
-This project will use Python, Matplotlib, and Geographic Information Systems (GIS) to analyze and visualize the geographical distribution of maternal healthcare access across Kenya. By combining maternal healthcare indicators with county-level geographic data, the study will identify counties with relatively high and low levels of healthcare access and highlight geographical disparities that may require further public-health attention.
+### Specific objectives
 
-## Main Objective
+1.	To determine the prevalence of child marriage among girls across African countries.
+   
+2.	To identify geographical areas with particularly high levels of child marriage.
 
-To analyze and visualize the geographical distribution of maternal healthcare access across counties in Kenya using Python and GIS.
+3.	To examine changes in child marriage prevalence over time.
+  
+4.	To investigate the relationship between child marriage and girls' education.
+   
+5.	To use Python and GIS to visualize geographical disparities and trends in child marriage across Africa.
 
-### Specific Objectives
-1.	To determine the distribution of antenatal care coverage across Kenyan counties. 
+## Main research question
 
-2.	To assess the geographical variation in skilled birth attendance across Kenyan counties. 
+What are the geographical patterns and trends of child marriage across Africa?
 
+### Specific research questions
 
-3.	To examine the distribution of facility-based deliveries across Kenyan counties. 
-
-4.	To identify counties with relatively low access to key maternal healthcare services. 
-
-5.	To use GIS and data visualization techniques to identify geographical disparities in maternal healthcare access across Kenya.
-
-
-## Research questions:
-
-1.	How does maternal healthcare access vary across Kenyan counties? 
-
-2.	Which counties have the lowest coverage of antenatal care and skilled birth attendance? 
-
-3.	How does the proportion of facility-based deliveries vary geographically across Kenya?
-
-4.	Which counties have the greatest gaps in maternal healthcare access?
+1.	Which African countries have the highest prevalence of child marriage?
+   
+2.	How does child marriage prevalence vary geographically across Africa?
+   
+3.	How has the prevalence of child marriage changed across African countries over time?
+   
+4.	Is child marriage prevalence associated with girls' educational attainment?
 
 
-## Plan
+## Methodology
+### 1. Study Design
 
-Map 1: ANC coverage by county
+This study will use a quantitative, descriptive and geospatial analysis approach to examine the distribution and trends of child marriage across African countries. The study will use secondary data rather than collecting primary data.
 
-Map 2: Skilled birth attendance by county
+### 2. Data Source
 
-Map 3: Facility-based deliveries by county
+The main dataset will be obtained from UNICEF's Child Marriage Database, which contains nationally representative data on child marriage indicators from sources such as Demographic and Health Surveys (DHS), Multiple Indicator Cluster Surveys (MICS), and other nationally representative surveys.
 
-Map 4: Home births by county
+The analysis will focus primarily on the percentage of women aged 20–24 who were married or in union before the age of 18, as this is a standard indicator used to measure child marriage.
 
-And then Matplotlib:
+Additional indicators may be incorporated where appropriate, such as:
 
-Chart 1: Top/bottom 10 counties for ANC
+Marriage before age 15
+Marriage before age 18
+Marriage before age 15 among younger women
+Marriage before age 18 among younger women
+Year of observation
+Country
+### 3. Data Preparation and Cleaning
 
-Chart 2: Top/bottom 10 counties for skilled birth attendance
+The UNICEF Excel dataset will be imported into Python using Pandas.
 
-Chart 3: Comparison of facility vs home deliveries
+The data will be examined for:
 
-## Source
-https://www.knbs.or.ke/reports/kdhs-2022
+-Missing values
+
+-Duplicate records
+
+-Incorrect data types
+
+-Inconsistent country names
+
+-Unnecessary rows and columns
+
+-Multiple header rows
+
+-Different survey years
+
+Relevant African countries will then be extracted from the dataset.
+
+The data will be transformed into a structured format containing variables such as:
+
+Country | Year | Indicator | Percentage
+
+### 4. Data Analysis
+
+Descriptive statistical analysis will be performed using Python.
+
+The analysis will determine:
+
+-Countries with the highest prevalence of child marriage
+
+-Countries with the lowest prevalence
+
+-Average prevalence across African countries
+
+-Differences between marriage before age 15 and before age 18
+
+-Changes in prevalence over time where sufficient data are available
+
+Countries will be ranked according to child-marriage prevalence to identify areas with particularly high levels.
+
+5. Data Visualization
+
+Matplotlib will be used to produce visualizations such as:
+
+-Bar charts showing countries with the highest prevalence
+
+-Comparisons between countries
+
+-Line graphs showing changes over time
+
+-Charts comparing marriage before age 15 and before age 18
+
+These visualizations will help communicate patterns and differences identified during the statistical analysis.
+
+6. GIS Analysis
+
+Geospatial analysis will be conducted using GeoPandas.
+
+A geographic boundary dataset containing the boundaries of African countries will be obtained in Shapefile or GeoJSON format.
+
+The child-marriage dataset will then be merged with the geographic boundary dataset using the country name or an appropriate country code as the common identifier.
+
+A choropleth map will be created to display the prevalence of child marriage across Africa. Different shades will represent different levels of prevalence, allowing geographical patterns and areas with relatively high prevalence to be identified.
+
+7. Software and Tools
+
+The following tools will be used:
+
+-Python — overall data analysis
+
+-Pandas — data cleaning and manipulation
+
+-NumPy — numerical operations where necessary
+
+-Matplotlib — statistical visualization
+
+-GeoPandas — GIS and spatial analysis
+
+-Jupyter Notebook / VS Code — development environment
+
+-Excel — initial inspection of the UNICEF dataset
+
+## Outcomes
+
+1. Africa child-marriage map
+
+A GeoPandas choropleth map showing the percentage of women aged 20–24 who were married or in union before age 18.
+
+2. Top 10 countries
+
+A Matplotlib bar chart showing the countries with the highest prevalence.
+
+3. Lowest 10 countries
+
+Another chart showing countries with relatively low prevalence.
+
+4. Change over time
+
+Check whether countries are actually making progress toward SDG Target 5.3, which calls for eliminating harmful practices including child marriage by 2030.
+
+5. Education relationship
+   
+Girls' education ↑ → Child marriage ↓?
+
+A scatter plot to look at the relationship between secondary-school attendance/educational attainment and child marriage prevalence.
+
+
 
