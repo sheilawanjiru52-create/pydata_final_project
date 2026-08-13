@@ -1,4 +1,13 @@
 # Geospatial Analysis of Child Marriage Among Girls in Africa
+
+## Problem Statement
+
+Child marriage remains a significant social and development challenge across Africa, particularly among girls. Marriage before the age of 18 can limit girls' educational opportunities, increase their vulnerability to early pregnancy and poor health outcomes, and restrict their economic and social participation. Despite efforts by governments and international organizations to reduce child marriage, its prevalence varies considerably across African countries, and the geographical distribution and patterns of the practice are not always easily understood.
+
+Existing child-marriage statistics are often presented in tables or reports, which can make it difficult to identify geographical patterns, differences between countries, and changes over time. Furthermore, understanding the relationship between child marriage and girls' educational attainment may provide additional insight into factors associated with the persistence of the practice.
+
+This project will therefore use geospatial and statistical analysis to examine the prevalence of child marriage among girls across African countries. Data from sources such as UNICEF and the World Bank will be combined with geographic boundary data to visualize the distribution of child marriage, identify countries with particularly high prevalence, examine changes over time, and investigate the relationship between child marriage and girls' educational attainment.
+
 ## AIM
 
 To investigate where child marriage is most prevalent, how it has changed over time, and whether socioeconomic factors are associated with it.
