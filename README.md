@@ -1,176 +1,211 @@
 # Geospatial Analysis of Child Marriage Among Girls in Africa
 
-## Problem Statement
+## Main Objective
 
-Child marriage remains a significant social and development challenge across Africa, particularly among girls. Marriage before the age of 18 can limit girls' educational opportunities, increase their vulnerability to early pregnancy and poor health outcomes, and restrict their economic and social participation. Despite efforts by governments and international organizations to reduce child marriage, its prevalence varies considerably across African countries, and the geographical distribution and patterns of the practice are not always easily understood.
+To analyze and visualize the geographical distribution and patterns of child marriage among girls across African countries using Geographic Information Systems (GIS).
 
-Existing child-marriage statistics are often presented in tables or reports, which can make it difficult to identify geographical patterns, differences between countries, and changes over time. Furthermore, understanding the relationship between child marriage and girls' educational attainment may provide additional insight into factors associated with the persistence of the practice.
 
-This project will therefore use geospatial and statistical analysis to examine the prevalence of child marriage among girls across African countries. Data from sources such as UNICEF and the World Bank will be combined with geographic boundary data to visualize the distribution of child marriage, identify countries with particularly high prevalence, examine changes over time, and investigate the relationship between child marriage and girls' educational attainment.
+### Specific Objectives
 
-## AIM
+-To analyze the prevalence and geographical distribution of child marriage among girls across African countries.
 
-To investigate where child marriage is most prevalent, how it has changed over time, and whether socioeconomic factors are associated with it.
+-To examine the relationship between child marriage prevalence and the legal frameworks governing marriage across African countries.
 
-## Main objective
+-To assess the association between child marriage prevalence and poverty levels across African countries.
 
-To analyze and visualize the geographical distribution and trends of child marriage across Africa using Python and GIS.
+-To examine the relationship between child marriage prevalence and girls’ educational attainment across African countries.
+-To develop interactive GIS visualizations to identify geographical patterns and areas with high prevalence of child marriage in Africa.
 
-### Specific objectives
 
-1.	To determine the prevalence of child marriage among girls across African countries.
-   
-2.	To identify geographical areas with particularly high levels of child marriage.
+## Research Questions
 
-3.	To examine changes in child marriage prevalence over time.
-  
-4.	To investigate the relationship between child marriage and girls' education.
-   
-5.	To use Python and GIS to visualize geographical disparities and trends in child marriage across Africa.
+1. What are the geographical patterns and prevalence of child marriage among girls across African countries?
 
-## Main research question
+2. How does child marriage prevalence vary across countries with different legal frameworks governing marriage?
 
-What are the geographical patterns and trends of child marriage across Africa?
+3. What is the relationship between poverty levels and child marriage prevalence across African countries?
 
-### Specific research questions
+4. What is the relationship between girls’ educational attainment and child marriage prevalence across African countries?
 
-1.	Which African countries have the highest prevalence of child marriage?
-   
-2.	How does child marriage prevalence vary geographically across Africa?
-   
-3.	How has the prevalence of child marriage changed across African countries over time?
-   
-4.	Is child marriage prevalence associated with girls' educational attainment?
+5. Which geographical areas in Africa have the highest prevalence of child marriage?
 
 
 ## Methodology
-### 1. Study Design
 
-This study will use a quantitative, descriptive and geospatial analysis approach to examine the distribution and trends of child marriage across African countries. The study will use secondary data rather than collecting primary data.
+1. Research Design
 
-### 2. Data Source
+The study will use a quantitative, descriptive and spatial analysis design based on secondary data.
 
-The main dataset will be obtained from UNICEF's Child Marriage Database, which contains nationally representative data on child marriage indicators from sources such as Demographic and Health Surveys (DHS), Multiple Indicator Cluster Surveys (MICS), and other nationally representative surveys.
+The study will use GIS to analyze the geographical distribution of child marriage and explore how prevalence varies in relation to legal frameworks, poverty, and girls’ education across African countries.
 
-The analysis will focus primarily on the percentage of women aged 20–24 who were married or in union before the age of 18, as this is a standard indicator used to measure child marriage.
+2. Data Sources
 
-Additional indicators may be incorporated where appropriate, such as:
+Secondary data will be obtained from publicly available sources, including:
 
-Marriage before age 15
-Marriage before age 18
-Marriage before age 15 among younger women
-Marriage before age 18 among younger women
-Year of observation
-Country
-### 3. Data Preparation and Cleaning
+UNICEF - child marriage prevalence
 
-The UNICEF Excel dataset will be imported into Python using Pandas.
+World Bank - poverty and socioeconomic indicators
 
-The data will be examined for:
+International education databases - girls’ educational attainment
 
--Missing values
+Legal databases/reports - minimum legal age of marriage and exceptions
 
--Duplicate records
+Geospatial datasets - country boundaries/shapefiles for Africa
 
--Incorrect data types
+3. Data Preparation and Cleaning
 
--Inconsistent country names
+The datasets will be cleaned and prepared for spatial analysis. This will involve:
 
--Unnecessary rows and columns
+Removing irrelevant records and variables
 
--Multiple header rows
+Handling missing values
 
--Different survey years
+Removing non-African countries
 
-Relevant African countries will then be extracted from the dataset.
+Standardizing country names
 
-The data will be transformed into a structured format containing variables such as:
+Converting variables to appropriate data types
 
-Country | Year | Indicator | Percentage
+Checking for duplicate records
 
-### 4. Data Analysis
+Merging the different datasets using country names as the common identifier
 
-Descriptive statistical analysis will be performed using Python.
+4. Exploratory Data Analysis
 
-The analysis will determine:
+Descriptive analysis will be conducted to understand the distribution of child marriage.
 
--Countries with the highest prevalence of child marriage
+This will include:
 
--Countries with the lowest prevalence
+Summary statistics
 
--Average prevalence across African countries
+Frequency distributions
 
--Differences between marriage before age 15 and before age 18
+Bar charts
 
--Changes in prevalence over time where sufficient data are available
+Histograms
 
-Countries will be ranked according to child-marriage prevalence to identify areas with particularly high levels.
+Box plots
 
-5. Data Visualization
+Country rankings
 
-Matplotlib will be used to produce visualizations such as:
+Child marriage will primarily be examined using the indicators:
 
--Bar charts showing countries with the highest prevalence
+Percentage of girls married by age 15
 
--Comparisons between countries
+Percentage of girls married by age 18
 
--Line graphs showing changes over time
+We also created a difference measure to help compare the two indicators.
 
--Charts comparing marriage before age 15 and before age 18
+5. Geospatial Analysis
 
-These visualizations will help communicate patterns and differences identified during the statistical analysis.
+The cleaned country-level data will be joined to an African country boundary shapefile/GeoJSON using a common country identifier.
 
-6. GIS Analysis
+Choropleth maps will then be created to visualize:
 
-Geospatial analysis will be conducted using GeoPandas.
+Child marriage by age 15
 
-A geographic boundary dataset containing the boundaries of African countries will be obtained in Shapefile or GeoJSON format.
+Child marriage by age 18
 
-The child-marriage dataset will then be merged with the geographic boundary dataset using the country name or an appropriate country code as the common identifier.
+Differences in child marriage prevalence
 
-A choropleth map will be created to display the prevalence of child marriage across Africa. Different shades will represent different levels of prevalence, allowing geographical patterns and areas with relatively high prevalence to be identified.
+Legal marriage frameworks
 
-7. Software and Tools
+Poverty levels
 
-The following tools will be used:
+Girls’ educational attainment
 
--Python — overall data analysis
+Different map layers will allow geographical patterns to be compared across countries.
 
--Pandas — data cleaning and manipulation
+6. Relationship Analysis
 
--NumPy — numerical operations where necessary
+The study will use scatter plots and correlation analysis to explore relationships between child marriage and:
 
--Matplotlib — statistical visualization
+Poverty
+Girls’ educational attainment
 
--GeoPandas — GIS and spatial analysis
+For example, child marriage prevalence will be plotted against girls' educational attainment to determine whether countries with higher educational attainment tend to have lower child marriage prevalence.
 
--Jupyter Notebook / VS Code — development environment
+Similarly, child marriage prevalence will be compared with poverty indicators.
 
--Excel — initial inspection of the UNICEF dataset
+7. Legal Framework Analysis
 
-## Outcomes
+Legal data will be analyzed to examine differences in marriage laws across countries.
 
-1. Africa child-marriage map
+Variables such as:
 
-A GeoPandas choropleth map showing the percentage of women aged 20–24 who were married or in union before age 18.
+Minimum legal age of marriage
 
-2. Top 10 countries
+Parental consent
 
-A Matplotlib bar chart showing the countries with the highest prevalence.
+Court exceptions
 
-3. Lowest 10 countries
+Customary exceptions
 
-Another chart showing countries with relatively low prevalence.
+Religious exceptions
 
-4. Change over time
+will be examined alongside child marriage prevalence.
 
-Check whether countries are actually making progress toward SDG Target 5.3, which calls for eliminating harmful practices including child marriage by 2030.
+This will allow the study to identify geographical patterns between legal frameworks and child marriage prevalence.
 
-5. Education relationship
-   
-Girls' education ↑ → Child marriage ↓?
+8. Visualization and Dashboard Development
 
-A scatter plot to look at the relationship between secondary-school attendance/educational attainment and child marriage prevalence.
+The findings will be presented through an interactive Streamlit dashboard.
+
+The dashboard will contain sections for:
+
+Introduction
+
+Aims & Research Questions
+
+Child Marriage Prevalence
+
+Legal Frameworks
+
+Poverty
+
+Girls’ Education
+
+Country Explorer
+
+The dashboard will allow users to select and compare countries and interact with maps and visualizations.
+
+9. Software and Tools
+
+The main tools used will be:
+
+Python
+
+Pandas - data cleaning and manipulation
+
+GeoPandas - GIS and spatial data analysis
+
+Matplotlib/Seaborn - visualization
+
+Plotly - interactive visualizations
+
+GeoJSON/Shapefiles - geographical boundaries
+
+Streamlit - interactive dashboard development
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
