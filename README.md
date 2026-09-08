@@ -1,5 +1,26 @@
 # Geospatial Analysis of Child Marriage Among Girls in Africa
 
+## Introduction
+Africa alone is home to 14 out of 20 countries with the highest rates of child marriage
+
+In Africa, 130 million girls and women today were married before their 18th birthday, the highest incidence globally (UNICEF, 2025).
+
+Child marriages are associated with:
+
+•	Early pregnancies- a leading cause of adolescent deaths
+
+•	They are more likely to leave education early
+
+•	Suffer domestic violence
+
+•	Contract HIV/AIDS and die due to complications during pregnancy and childbirth – their bodies simply aren’t ready.
+
+And yet, at least 117 countries around the world allow it to happen
+Concerningly, most progress in Sub-Saharan Africa has occurred amongst the wealthiest families, while in poorer communities, there has been a rise in child marriage. This perpetuates an unacceptable and deeply entrenched divide along socio-economic lines and demonstrates how governments need to focus more on prioritizing elimination of child marriage. 
+
+This project focused on analyzing and visualizing the geographical distribution of child marriage among girls across African countries using GIS and secondary data. It examined child marriage prevalence, particularly the proportion of girls married before ages 15 and 18, and explored how prevalence varied in relation to legal marriage frameworks, poverty levels, and girls’ educational attainment.
+
+
 ## Main Objective
 
 To analyze and visualize the geographical distribution and patterns of child marriage among girls across African countries using Geographic Information Systems (GIS).
@@ -14,6 +35,7 @@ To analyze and visualize the geographical distribution and patterns of child mar
 -To assess the association between child marriage prevalence and poverty levels across African countries.
 
 -To examine the relationship between child marriage prevalence and girls’ educational attainment across African countries.
+
 -To develop interactive GIS visualizations to identify geographical patterns and areas with high prevalence of child marriage in Africa.
 
 
